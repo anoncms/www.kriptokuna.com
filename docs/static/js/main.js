@@ -62,7 +62,11 @@ var ttlSupply = -1;
 
 	///////////////////////////
 	// Mobile dropdown
-	$('.has-dropdown a').on('click', function() {
+	// $('.has-dropdown a').on('click', function() {
+	// 	$(this).parent().toggleClass('open-drop');
+	// });
+
+	$(".has-dropdown>a").each(function() {
 		$(this).parent().toggleClass('open-drop');
 	});
 
@@ -124,12 +128,24 @@ var ttlSupply = -1;
 			}
 		}
 	});
-
+	
     var referral = getReferralFromUrl();
 
     if (referral) {
-        Cookies.set('referral', referral, { expires: 30, domain: getDomainName(window.location.hostname) });
-    }
+		Cookies.set('referral', referral, { expires: 30, domain: getDomainName(window.location.hostname) });
+		var urlSplit = window.location.href.split("?");
+		window.location.href = urlSplit[0];
+		return;
+	}
+	
+	var ref = Cookies.get('referral');
+
+	if (ref) {
+		$(".robot").each(function() {
+			var old = $(this).attr('href');
+			$(this).attr('href', old + '?start=' + ref);
+		});
+	}
     
     //  else {
     //     ref = Cookies.get('ref');
