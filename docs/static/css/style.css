@@ -1523,6 +1523,12 @@ header {
     margin: 0;
 }
 
+.footer-warning {
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
 
 /*------------------------------------*\
 	Responsive
