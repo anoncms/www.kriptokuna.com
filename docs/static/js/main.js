@@ -22,6 +22,8 @@ var ttlSupply = -1;
         });
 
 		calculateInterest();
+
+		calculateAintAmount();
 	});
 
 	///////////////////////////
@@ -203,4 +205,11 @@ function calculateInterest() {
 
 	$("#total").val(total.toFixed(2));
 	$("#monthly").val(monthly.toFixed(2));
+}
+
+function calculateAintAmount() {
+	var waves = $("#wavesAmount").val();
+	$.getJSON( "https://aint.kriptokuna.com/calculate/" + waves, function( data ) {
+		$("#aintAmount").val(data.amount);
+	});
 }
