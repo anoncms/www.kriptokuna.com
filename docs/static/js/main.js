@@ -20,6 +20,8 @@ var ttlSupply = -1;
                 }
             }
         });
+
+		calculateInterest();
 	});
 
 	///////////////////////////
@@ -189,4 +191,16 @@ function getReferralFromUrl(){
 
 function getDomainName(hostName) {
     return hostName.substring(hostName.lastIndexOf(".", hostName.lastIndexOf(".") - 1) + 1);
+}
+
+function calculateInterest() {
+	var amount = $("#amount").val();
+	var years = $("#years").val();
+	var percent = Math.pow(1.5, years);
+
+	var total = amount * percent;
+	var monthly = total * 0.0343660831319166;
+
+	$("#total").val(total.toFixed(2));
+	$("#monthly").val(monthly.toFixed(2));
 }

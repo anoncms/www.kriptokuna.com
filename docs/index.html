@@ -257,7 +257,29 @@
 						<h2 class="title">Jednostavni kalkulator kamate</h2>
 					</div>
 
-                    <p>U izradi.</p>
+                    <form action="javascript:calculateInterest();">
+                        <div class="form-row">
+                            <div class="form-group col-md-6" style="padding-left: 0;">
+                                <label>Iznos na računu</label>
+                                <input type="text" class="form-control input-lg" id="amount" placeholder="1000" value="1000">
+                            </div>
+                            <div class="form-group col-md-6" style="padding-left: 0;">
+                                <label>Broj godina</label>
+                                <input type="text" class="form-control input-lg" id="years" placeholder="10" value="10">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6" style="padding-left: 0;">
+                                <label>Ukupni kapital</label>
+                                <input type="text" class="form-control input-lg" id="total" placeholder="57665" readonly value="57665">
+                            </div>
+                            <div class="form-group col-md-6" style="padding-left: 0;">
+                                <label>Mjesečna zarada</label>
+                                <input type="text" class="form-control input-lg" id="monthly" placeholder="1981" readonly value="1981">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 20px;">Izračunaj kamatu</button>
+                      </form>
 				</div>
 		
 			</div>
@@ -335,7 +357,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
     <script src="./static/js/datamaps.world.min.js"></script>
     <script src="./static/js/js.cookie.min.js"></script>
-    <script type="text/javascript" src="./static/js/main.js?v=1.0.18"></script>    
+    <script type="text/javascript" src="./static/js/main.js?v=1.0.19"></script>    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113507826-3"></script>
     <script>
