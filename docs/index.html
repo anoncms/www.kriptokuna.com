@@ -267,7 +267,7 @@
                                 <label>Broj godina</label>
                                 <input type="text" class="form-control input-lg" id="years" placeholder="10" value="10">
                             </div>
-                        </div>
+                        </di
                         <div class="form-row">
                             <div class="form-group col-md-6" style="padding-left: 0;">
                                 <label>Ukupni kapital</label>
@@ -277,6 +277,10 @@
                                 <label>Mjesečna zarada</label>
                                 <input type="text" class="form-control input-lg" id="monthly" placeholder="1981" readonly value="1981">
                             </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="alert alert-danger" role="alert" style="margin-bottom: 0; margin-top: 5px; display: none;" id="calcMessage">
+                            Iznos na računu i broj godina moraju biti veći od 0.
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 20px;">Izračunaj kamatu</button>
                       </form>
@@ -357,7 +361,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
     <script src="./static/js/datamaps.world.min.js"></script>
     <script src="./static/js/js.cookie.min.js"></script>
-    <script type="text/javascript" src="./static/js/main.js?v=1.0.19"></script>    
+    <script type="text/javascript" src="./static/js/main.js?v=1.0.20"></script>    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113507826-3"></script>
     <script>

@@ -198,18 +198,38 @@ function getDomainName(hostName) {
 function calculateInterest() {
 	var amount = $("#amount").val();
 	var years = $("#years").val();
-	var percent = Math.pow(1.5, years);
 
-	var total = amount * percent;
-	var monthly = total * 0.0343660831319166;
+	if (parseInt(amount) == 0 || parseInt(years) == 0 || amount == "" || years == "") {
+		$("#calcMessage").fadeIn(function() {
+			setTimeout(function() {
+				$("#calcMessage").fadeOut();
+			}, 5000);
+		});
+	} else {
+		$("#calcMessage").fadeOut();
 
-	$("#total").val(total.toFixed(2));
-	$("#monthly").val(monthly.toFixed(2));
+		var percent = Math.pow(1.5, years);
+
+		var total = amount * percent;
+		var monthly = total * 0.0343660831319166;
+	
+		$("#total").val(total.toFixed(2));
+		$("#monthly").val(monthly.toFixed(2));
+	}
 }
 
 function calculateAintAmount() {
 	var waves = $("#wavesAmount").val();
-	$.getJSON( "https://aint.kriptokuna.com/calculate/" + waves, function( data ) {
-		$("#aintAmount").val(data.amount);
-	});
+	if (parseInt(waves) == 0 || waves == "") {
+		$("#calcMessage").fadeIn(function() {
+			setTimeout(function() {
+				$("#calcMessage").fadeOut();
+			}, 5000);
+		});
+	} else {
+		$("#calcMessage").fadeOut();
+		$.getJSON( "https://aint.kriptokuna.com/calculate/" + waves, function( data ) {
+			$("#aintAmount").val(data.amount);
+		});
+	}
 }
