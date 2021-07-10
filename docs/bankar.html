@@ -113,7 +113,30 @@
 
                     <p>AINT (Anonymous Infrastructure Token) je standardni Waves token kojim se može trgovati, primati ga ili slati putem Kriptokuna novčanika.</p>
 
-                    <p style="margin-bottom: 35px;">Više o AINT bankarskom tokenu možete pročitati na stranici "<a href="/o-kriptokuni">O Kriptokuni</a>". Za kalkulaciju o iznosu i cijeni AINT tokena možete iskoristiti kalkulator na dnu ove stranice.</p>
+                    <p style="margin-bottom: 35px;">Više o AINT bankarskom tokenu možete pročitati na stranici "<a href="/o-kriptokuni">O Kriptokuni</a>". Za kalkulaciju o iznosu i cijeni AINT tokena možete iskoristiti kalkulator cijene.</p>
+
+                    <div class="faqRow">
+                        <h4><i class="fa fa-calculator"></i> Kalkulator cijene</h4>
+                        <div class="well" style="margin-bottom: 40px;">
+                            <form action="javascript:calculateAintAmount();">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6" style="padding-left: 0;">
+                                        <label>Iznos WAVESa</label>
+                                        <input type="text" class="form-control input-lg" id="wavesAmount" placeholder="10" value="10">
+                                    </div>
+                                    <div class="form-group col-md-6" style="padding-left: 0;">
+                                        <label>Iznos AINTa</label>
+                                        <input type="text" class="form-control input-lg" id="aintAmount" placeholder="10" value="10" readonly disabled>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="alert alert-danger" role="alert" style="margin-bottom: 15px; margin-top: 5px; display: none;" id="calcMessage">
+                                    Iznos WAVESa mora biti veći od 0.
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Izračunaj količinu</button>
+                              </form>
+                        </div>
+                    </div>
 
                     <div class="faqRow">
                         <h4><i class="fa fa-arrow-down"></i> Kako kupiti AINT bankarski token?</h4>
@@ -151,29 +174,6 @@
                             <p class="text-center" style="margin-bottom: 0;">
                                 <img src="./static/img/qr-code-aint.svg" alt="QR Code Address" style="width: 300px;">
                             </p>
-                        </div>
-                    </div>
-
-                    <div class="faqRow">
-                        <h4><i class="fa fa-calculator"></i> Kalkulator cijene</h4>
-                        <div class="well" style="margin-bottom: 40px;">
-                            <form action="javascript:calculateAintAmount();">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6" style="padding-left: 0;">
-                                        <label>Iznos WAVESa</label>
-                                        <input type="text" class="form-control input-lg" id="wavesAmount" placeholder="10" value="10">
-                                    </div>
-                                    <div class="form-group col-md-6" style="padding-left: 0;">
-                                        <label>Iznos AINTa</label>
-                                        <input type="text" class="form-control input-lg" id="aintAmount" placeholder="10" value="10" readonly disabled>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="alert alert-danger" role="alert" style="margin-bottom: 15px; margin-top: 5px; display: none;" id="calcMessage">
-                                    Iznos WAVESa mora biti veći od 0.
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Izračunaj količinu</button>
-                              </form>
                         </div>
                     </div>
 
