@@ -228,7 +228,7 @@ function calculateAintAmount() {
 		});
 	} else {
 		$("#calcMessage").fadeOut();
-		$.getJSON( "https://aint.kriptokuna.com/calculate/" + waves, function( data ) {
+		$.getJSON( "https://aint.kriptokuna.com/calculate/ahrk/" + waves, function( data ) {
 			$("#aintAmount").val(data.amount);
 		});
 	}
