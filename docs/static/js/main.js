@@ -212,9 +212,13 @@ function calculateInterest() {
 
 		var total = amount * percent;
 		var monthly = total * 0.0343660831319166;
+		var smonthly = amount * 0.0343660831319166;
+		var sdaily = amount * 0.0011114805470662;
 	
 		$("#total").val(total.toFixed(2));
 		$("#monthly").val(monthly.toFixed(2));
+		$("#smonthly").val(smonthly.toFixed(2));
+		$("#sdaily").val(sdaily.toFixed(2));
 	}
 }
 
